@@ -1,8 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./media/MyImg.png">
+    <title>Contact page</title>
+</head>
 
-<body></body>
+<body class="bgcolor1">
+    <div class="wrapper">
+        <div class="topnav">
+            <a class="active" href="index.html">
+                <h1><b>Hans Simanjuntak</b></h1>
+            </a>
+            <a href="index.html">About</a>
+            <a href="./projects/projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="">Contact</a>
+        </div>
+        <div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="mode-toggle" class="floating">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <footer class="grid-item1 footer">
+            <section><b>Let's connect by filling out the contact form below. You can also connect with me through
+                    linkedin.</b></section><br>
+            <section><b> I have attached my linkedin profile at the bottom of this page.</b>
+            </section>
+            <div id="form-submitted-msg">Successfully submitted!</div>
+            <table class="contact">
+                <tr>
+                    <td>
+                        <h3><u>Contact</u></h3>
+                        <form id="validationForm" action="/example_action.html" method="get" novalidate>
+                            <div class="input-group">
+                                <label for="name" class="form-label" text-align:left;><b>Name: </b></label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                                <small class="error-msg invalid-feedback">Required</small>
+                            </div>
+                            <div class="input-group">
+                                <label for="email" class="form-label"><b>Email: </b></label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <small class="error-msg invalid-feedback">Required</small>
+                            </div>
+                            <div class="input-group">
+                                <label for="message" class="form-label"><b> Message: </b></label><br>
+                                <textarea id="message" name="message" style="height: 200px;" required> </textarea>
+                                <small class="error-msg invalid-feedback">Required</small>
+                            </div>
+                            <div class="form-btns">
+                                <button type="submit" class="btn btn-primary submit" disabled>SUBMIT</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <ul>
+                    <li style="display:inline-block; margin:0 2%;"><a href="https://www.linkedin.com/in/hansiman/"
+                            target="_self"><i class="fa fa-linkedin-square" style="font-size:48px"></i>
+                    <li style="display:inline-block; margin:0 2%;"><a href="https://github.com/hsima023"
+                            target="_self"><i class="fa fa-github" style="font-size:48px"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="./javascript/script.js"></script>
+</body>
 
 </html>
