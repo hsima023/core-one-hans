@@ -11,7 +11,7 @@ h1 {
 
 h2 {
   text-align: center;
-  float: inline-end;
+  float: inline;
 }
 
 .topnav {
@@ -156,7 +156,7 @@ input:checked+.slider:before {
 
 /*Fade and Slide on Scroll*/
 .main_container {
-  max-width: 1400px;
+  max-width: 60%;
   margin: 0 auto;
 }
 
