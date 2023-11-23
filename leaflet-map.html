@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Amazon FC LGB8 Map - Leaflet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <h1>Amazon FC LGB8 Map</h1>
+    <p>This webmap shows the location of Amazon FC LGB8</p>
+
+    <div id="map" style="width: 600px; height: 400px;">MAP GOES HERE</div>
+    <script>
+
+        const map = L.map('map').setView([34.129610, //latitude
+            -117.405390], //longitude
+            13);    //zoom
+
+        L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+            attribution: 'Copyright Google Maps'
+        }).addTo(map);
+
+        var marker = L.marker([34.129610, -117.405390]).addTo(map);
+        var circle1 = L.circle([34.133355, -117.398773], { color: 'red', radius: 200 }).addTo(map);
+        var circle2 = L.circle([34.135052, -117.401898], { color: 'red', radius: 200 }).addTo(map);
+
+        marker.bindPopup("Amazon FC LGB8").openPopup();
+        circle1.bindPopup("24 Hour Fitness");
+        circle2.bindPopup("Ayres Hotel Rialto/Fontana");
+
+
+        function onMapClick(e) {
+            alert("You clicked the map at " + e.latlng);
+        }
+
+        map.on('click', onMapClick);
+
+    </script>
+
+</body>
+
+</html>
